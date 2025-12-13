@@ -6,7 +6,7 @@
 img{
     max-width: 100%;
     height: auto;
-    /* display: block; */
+   
 }
 .max-container{
     max-width: 100%;
@@ -93,7 +93,7 @@ a{
     border-radius: 15px;
     background-color: #2F2F2F;
     margin: 0 196px;
-    overflow-x: auto;
+ 
     margin-top: 116px;
 }
 .bnr-list>li{
@@ -217,6 +217,7 @@ color: #fff;
       border-collapse: collapse;
       color: #094536;
       font-size: 14px;
+       overflow-x:auto;
     }
 
     th, td {
@@ -309,12 +310,15 @@ color: #fff;
     padding: 0 15px;
 }
 .testi-cards{
-   position: relative;
+ position: relative;
     padding: 40px 40px;
     border-radius: 5px;
     border: 1px solid white;
     
     background-color: #ffffff;
+}
+.swiper, .swiper-wrapper, .swiper-slide {
+    overflow: visible !important;
 }
  .testimonials{
     position:relative;
@@ -344,6 +348,9 @@ color: #fff;
     .name>p
     {
         margin-left: 20px;
+    }
+    .swiper-slide{
+      position:relative;
     }
     .green1{
         position: absolute;
@@ -438,6 +445,9 @@ color: #fff;
     text-align: center;
     color: white;
    }
+     .bnr-list > li{
+      text-align: center;
+     }
     /* responsive: keep table scroll instead of stacking */
     @media (max-width: 768px) {
       .plans-wrapper {
@@ -446,7 +456,8 @@ color: #fff;
 
       table {
         display: block;
-        overflow-x: auto;
+       
+
         white-space: nowrap;
       }
     }
@@ -558,7 +569,7 @@ a,
 
 @media (max-width: 992px) {
   .bnr-list {
-    margin: 0 40px;
+    margin:  40px;
   }
   .footer-list {
     margin: 0 40px;
@@ -567,7 +578,23 @@ a,
 
 
 @media (max-width: 768px) {
-
+table{
+  max-width: 100%;
+}
+.btn-book{
+  padding: 2px 10px;
+}
+.plan-price{
+  font-size: 16px;
+}
+.feature,td{
+  padding-left: 0;
+  padding-right: 0;
+}
+.plan-head{
+    padding-left: q0px;
+  padding-right: 10px;
+}
   /* header / nav */
   header {
     padding-top: 15px;
@@ -631,15 +658,13 @@ a,
     margin-right: 0;
     margin-bottom: 10px;
   }
-  .bnr-list {
-    flex-direction: column;
-    margin: 40px 15px 0;
-    gap: 16px;
+  .bnr-list>li>h4 {
+    font-size:12px;
   }
   .bnr-list > li {
-    border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    padding: 12px 0;
+ padding: 0 10px;
+  
+    text-align: center;
   }
 
 
@@ -658,9 +683,9 @@ a,
   }
 
  
-  .packages .max-container {
+  /* .packages .max-container {
     overflow-x: auto;
-  }
+  } */
   table {
     min-width: 650px;
   }
@@ -673,11 +698,14 @@ a,
   }
 
  
-  .col30,
-  .col70 {
+  .col30
+  {
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 20px;
+  }
+  .card2{
+    display: none;
   }
   .stack2 {
     flex-direction: row;
@@ -691,10 +719,60 @@ a,
     text-align: center;
   }
 }
+@media (max-width: 698px) {
+.plan-head{
+    padding-left: 8px;
+  padding-right: 8px;
+}
+table{
+  margin: 0 auto;
+}
+.plan-head{
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn-book{
+  padding: 2px 0;
+}
+.btn-book{
+  font-size: 10px;
+}
+.ftr-logo {
+  max-width: 80px;
 
-
+}
+.footer-list>li>a{
+  font-size: 12px;
+}
+}
+@media (max-width: 592px){
+   .ftr-logo{
+ max-width: 60px;
+ }
+  .plan-price{
+    font-size: 10px;
+  }
+   .plan-title{
+    font-size: 10px;
+  }
+  .feature,td{
+    font-size: 8px;
+  }
+th{
+  font-size: 10px;
+}
+  
+}
 @media (max-width: 480px) {
-
+  .ftr-logo{
+ max-width: 30px;
+ }
+  .footer-list>li>a{
+ font-size: 10px;
+ }
+.fst{
+  font-size: 6px;
+}
   .cmn-btn {
     padding: 10px 20px;
     font-size: 14px;
@@ -706,9 +784,47 @@ a,
 
   .testi-cards {
     padding: 24px 20px;
+    overflow:visible ;
   }
+.testi-cards {
+    overflow: visible;
+}
 
   .bnr-list {
     padding: 16px;
   }
+  .check-wrap{
+    width:20px
+
+  }
 }
+@media (max-width: 400px) {
+    /* .footer-list>li>a{
+ font-size: 6px;
+ } */
+
+  .plan-price{
+    font-size: 8px;
+  }
+   .plan-title{
+    font-size: 8px;
+  }
+  .feature,td{
+    font-size: 6px;
+  }
+.check-wrap{
+    width:12px
+
+  }
+   .fa-check{
+    display: inline-block;
+    width:5px
+
+  }
+}
+.swiper-pagination-bullet {
+  background: #336A64 !important;
+  opacity: 0.5;
+}
+
+
